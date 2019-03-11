@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/user/addUser}" method="post">
+    用户ID:<input type="text" name="id"/><font color="#a52a2a" th:errors="${user.id}"></font>
+    <br/>
+    用户名:<input type="text" name="name"/><font color="#a52a2a" th:errors="${user.name}"></font>
+    <br/>
+    用户年龄:<input type="text" name="age"/><font color="#a52a2a" th:errors="${user.age}"></font>
+    <br/>
+    <input type="submit"/>
+
+</form>
+</body>
+</html>
